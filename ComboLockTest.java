@@ -2,12 +2,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
-A test for the ComboLock class.
+ * A test for the ComboLock class.
  */
-public class ComboLockTest
-{
-    public static void main(String[] args)
-    {
+public class ComboLockTest {
+    public static void main(String[] args) {
         int secret1 = 6;
         int secret2 = 12;
         int secret3 = 24;
@@ -17,30 +15,25 @@ public class ComboLockTest
         Scanner in = new Scanner(System.in);
         boolean opened = false;
         boolean turningClockwise = true;
-        while(!opened)
-        {
+        while (!opened) {
             System.out.println("What direction would you like to turn the lock? (cw or ccw): ");
             String direction = in.next();
             turningClockwise = direction.equals("cw");
 
             System.out.println("Enter number of ticks to turn " + (turningClockwise ? "clockwise" : "counterclockwise") + " Enter a negative number to quit.");
             int ticks = in.nextInt();
-            if(ticks < 0)
-            {
+            if (ticks < 0) {
                 return;
             }
 
-            if(turningClockwise)
-            {
+            if (turningClockwise) {
                 lock.turnClockwise(ticks);
-            }
-            else
-            {
+            } else {
                 lock.turnCounterclockwise(ticks);
             }
-            
+
             opened = lock.open();
         }
         System.out.println("You opened the lock!");
-    }    
+    }
 }

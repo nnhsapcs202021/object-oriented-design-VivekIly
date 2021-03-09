@@ -8,13 +8,11 @@ import java.util.ArrayList;
  * @author gcschmit
  * @version 19 June 2019
  */
-public class CoinTest
-{
+public class CoinTest {
     /**
      * Tests the Coin class' implementation of the Comparable interface.
      */
-    public static void testComparable()
-    {
+    public static void testComparable() {
         Coin quarter = new Coin(0.25, "quarter");
         Coin dime = new Coin(0.10, "dime");
         Coin nickel = new Coin(0.05, "nickel");

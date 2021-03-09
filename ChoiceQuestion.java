@@ -1,32 +1,29 @@
 import java.util.ArrayList;
 
 /**
-A question with multiple choices.
+ * A question with multiple choices.
  */
-public class ChoiceQuestion extends Question
-{
+public class ChoiceQuestion extends Question {
     private ArrayList<String> choices;
 
     /**
-    Constructs a choice question with the specified question.
-
-    @param question the text of this question
+     * Constructs a choice question with the specified question.
+     *
+     * @param question the text of this question
      */
-    public ChoiceQuestion( String question ) 
-    {
+    public ChoiceQuestion(String question) {
         this.choices = new ArrayList<String>();
     }
 
     /**
-    Adds an answer choice to this question.
-    @param choice the choice to add
-    @param correct true if this is the correct choice, false otherwise
+     * Adds an answer choice to this question.
+     *
+     * @param choice  the choice to add
+     * @param correct true if this is the correct choice, false otherwise
      */
-    public void addChoice(String choice, boolean correct)
-    {
+    public void addChoice(String choice, boolean correct) {
         this.choices.add(choice);
-        if (correct) 
-        {
+        if (correct) {
             // Convert choices.size() to string
             String choiceString = "" + this.choices.size();
             this.setAnswer(choiceString);
@@ -34,13 +31,11 @@ public class ChoiceQuestion extends Question
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         // Display the question text
         String str = super.toString();
         // Display the answer choices
-        for (int i = 0; i < this.choices.size(); i++)
-        {
+        for (int i = 0; i < this.choices.size(); i++) {
             int choiceNumber = i + 1;
             str += "\n" + choiceNumber + ": " + this.choices.get(i);
         }

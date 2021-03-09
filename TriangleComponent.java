@@ -7,19 +7,16 @@ import java.awt.geom.Point2D;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class TriangleComponent extends JComponent
-{
+public class TriangleComponent extends JComponent {
     private static final int MAX_POINTS = 3;
 
-    public TriangleComponent()
-    {
-        
+    public TriangleComponent() {
+
     }
 
     @Override
-    public void paintComponent(Graphics g)
-    {  
-        super.paintComponent( g );
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
     }
