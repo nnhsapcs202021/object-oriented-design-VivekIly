@@ -12,10 +12,17 @@ public class FillInQuestion extends Question {
 
     /**
      * Constructs a FillInQuestion object with the specified text that contains the answer within.
-     * @param question
+     *
+     * @param question the specified question text with the embedded answer.
      */
     public FillInQuestion(String question) {
+        /*
+        Explicitly call the Question class's contructor that takes one parameter.
+            Calling the super class's constructor *msut* be the first line of code in the subclasses' constructor.
 
+        If we don't explicitly call the super class's constructor, Java will autmoatically call the superclass's default (e.g., no parameters) constructor.
+         */
+        super(question);
     }
 
 /*
@@ -23,7 +30,6 @@ public class FillInQuestion extends Question {
 */
 
     /**
-     *
      * @param questionText the text of this question
      */
     @Override
